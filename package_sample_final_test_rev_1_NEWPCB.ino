@@ -16,7 +16,7 @@
 #define OFFSET_CH12  5/2000 //2.7
 #define OFFSET_D1  -9
 #define OFFSET_D2  -9
-#define OFFSET_D3  -9ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+#define OFFSET_D3  -9
 #define OFFSET_D4  -9
 //I2C device found at address 0x3C  ! oled
 //I2C device found at address 0x40  ! INA3221
@@ -133,8 +133,8 @@ String PrefSSID, PrefPassword;  // used by preferences storage
 #define current_vdd    45.2
 #define current_vdd_low current_vdd * 0.90    //min
 #include <SDL_Arduino_INA3221.h>
-#define freq_hi    500000   //500k
-#define freq_low   75000    //75k       
+#define freq_hi    500000   //500k  set freq Hi 19mA @gain =2 
+#define freq_low   200000    //200k  set freq Low 29mA@Gain =2 
 //---------------------------------------------------------------------------
 SDL_Arduino_INA3221 ina3221 = SDL_Arduino_INA3221(0x41, 0.1) ;//0x41
 SDL_Arduino_INA3221 ina3221a = SDL_Arduino_INA3221(0x40, 0.1) ;
